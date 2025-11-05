@@ -21,8 +21,7 @@
 }
 
 .section__title {
-  font-family: "Spectral", serif;
-  font-weight: 500;
+  font-family: "Spectral-LightItalic", serif;
   margin-bottom: 12px;
 
   color: $primary-text-color;
@@ -33,23 +32,23 @@
   text-align: center;
 
   @media screen and (min-width: 480px) {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   @media screen and (min-width: 980px) {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   @media screen and (min-width: 1024px) {
-    font-size: 48px;
+    font-size: 44px;
   }
 
   @media screen and (min-width: 1440px) {
-    font-size: 60px;
+    font-size: 48px;
   }
 
 

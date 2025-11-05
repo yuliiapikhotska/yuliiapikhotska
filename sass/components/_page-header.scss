@@ -28,6 +28,7 @@
 
   img {
     height: 40px;
+    width: auto;
 
     @media screen and (min-width: 768px) {
       height: 44px;
@@ -123,8 +124,7 @@
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 1200px) {
-  }
+  @media screen and (min-width: 1200px) {}
 }
 
 .main-nav__item {
