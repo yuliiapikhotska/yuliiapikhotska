@@ -3,7 +3,7 @@ i18next
   .init({
     lng: "uk",
     fallbackLng: "uk",
-    debug: true,
+    debug: false,
     backend: {
       loadPath: "./locales/{{lng}}/common.json"
     }

@@ -35,7 +35,7 @@
             display: flex;
             justify-content: space-between;
             border-radius: 10px;
-            padding: 15px 20px;
+            padding: 8px 12px;
             font-size: 18px;
             transition: all 0.3s ease;
 
@@ -58,7 +58,7 @@
         }
 
         .consultation-title {
-            font-size: 22px ! important;
+            font-size: 28px ! important;
         }
 
         .consultation-prices__item {
@@ -78,7 +78,7 @@
 
     .contact-text {
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 20px;
     }
 
@@ -105,7 +105,7 @@
         padding: 12px;
         border-radius: 8px;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         text-decoration: none;
         color: $primary-white-color;
         transition: all 0.3s ease;
@@ -142,6 +142,14 @@
 
             &:hover {
                 background: #3a5782;
+            }
+        }
+
+        &.instagram {
+            background: linear-gradient(135deg, #a85ca8, #d76d77, #f3a183);
+
+            &:hover {
+                filter: brightness(1.08);
             }
         }
     }

@@ -1,3 +1,38 @@
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/Manrope/Manrope-Regular.woff2") format("woff2"), url("../../fonts/Manrope/Manrope-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/Manrope/Manrope-SemiBold.woff2") format("woff2"), url("../../fonts/Manrope/Manrope-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/Manrope/Manrope-Bold.woff2") format("woff2"), url("../../fonts/Manrope/Manrope-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../../fonts/Manrope/Manrope-ExtraBold.woff2") format("woff2"), url("../../fonts/Manrope/Manrope-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spectral-LightItalic";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../../fonts/Spectral/Spectral-LightItalic.woff2") format("woff2"), url("../../fonts/Spectral/Spectral-LightItalic.ttf") format("truetype");
+  font-display: swap;
+}
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -404,6 +439,7 @@ li {
 }
 .page-header__logo img {
   height: 40px;
+  width: auto;
 }
 @media screen and (min-width: 768px) {
   .page-header__logo img {
@@ -584,8 +620,7 @@ li {
 }
 
 .section__title {
-  font-family: "Spectral", serif;
-  font-weight: 500;
+  font-family: "Spectral-LightItalic", serif;
   margin-bottom: 12px;
   color: #2B3147;
   font-weight: 300;
@@ -596,27 +631,27 @@ li {
 }
 @media screen and (min-width: 480px) {
   .section__title {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 768px) {
   .section__title {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 @media screen and (min-width: 980px) {
   .section__title {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 @media screen and (min-width: 1024px) {
   .section__title {
-    font-size: 48px;
+    font-size: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
   .section__title {
-    font-size: 60px;
+    font-size: 48px;
   }
 }
 .section__title--hidden {
@@ -683,13 +718,13 @@ li {
 .hero-section .hero-section__content .hero-section__title {
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 0.5rem;
 }
 .hero-section .hero-section__content .hero-section__subtitle {
   font-family: "Manrope", sans-serif;
   font-size: 0.9rem;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 @media (min-width: 480px) {
   .hero-section .hero-section__content {
@@ -709,7 +744,7 @@ li {
     left: 0%;
     transform: translate(0, -50%);
     width: 50%;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: left;
     margin: 0;
   }
@@ -721,23 +756,50 @@ li {
     font-size: 1rem;
   }
 }
+@media (min-width: 1024px) {
+  .hero-section .hero-section__content .hero-section__title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .hero-section .hero-section__content .hero-section__subtitle {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section .hero-section__content {
+    width: 45%;
+  }
+  .hero-section .hero-section__content .hero-section__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .hero-section .hero-section__content .hero-section__subtitle {
+    font-size: 1.5rem;
+  }
+}
 @media (min-width: 1440px) {
   .hero-section .hero-section__content {
-    left: 10%;
-    padding: 2.5rem;
+    left: 2%;
+  }
+  .hero-section .hero-section__content .hero-section__title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  .hero-section .hero-section__content .hero-section__subtitle {
+    font-size: 2rem;
   }
 }
 @media (min-width: 1920px) {
   .hero-section .hero-section__content {
-    width: 40%;
-    left: 10%;
+    width: 45%;
+    left: 2%;
     padding: 3rem;
   }
   .hero-section .hero-section__content .hero-section__title {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
   }
   .hero-section .hero-section__content .hero-section__subtitle {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
   }
 }
 .hero-section .hero-section__image-wrapper {
@@ -1116,7 +1178,7 @@ li {
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
-  padding: 15px 20px;
+  padding: 8px 12px;
   font-size: 18px;
   transition: all 0.3s ease;
 }
@@ -1133,7 +1195,7 @@ li {
     height: 300px;
   }
   .section-video .consultation-title {
-    font-size: 22px !important;
+    font-size: 28px !important;
   }
   .section-video .consultation-prices__item {
     flex-direction: column;
@@ -1150,7 +1212,7 @@ li {
 }
 .contact-box .contact-text {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 .contact-box .contact-links {
@@ -1176,7 +1238,7 @@ li {
   padding: 12px;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease;
@@ -1210,6 +1272,12 @@ li {
 }
 .contact-box .contact-link.phone:hover {
   background: #3a5782;
+}
+.contact-box .contact-link.instagram {
+  background: linear-gradient(135deg, #a85ca8, #d76d77, #f3a183);
+}
+.contact-box .contact-link.instagram:hover {
+  filter: brightness(1.08);
 }
 
 .youtube-facade {
@@ -1403,7 +1471,7 @@ li {
   text-align: left;
   padding: 20px 24px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   background: #f6f8fa;
   border: none;
   outline: none;
@@ -1479,7 +1547,7 @@ li {
   max-width: 250px;
 }
 .footer__info .footer__title {
-  font-family: "Spectral", serif;
+  font-family: "Spectral-LightItalic", serif;
   font-size: 24px;
   font-weight: 300;
   font-style: italic;
