@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Manrope";
   font-style: normal;
@@ -52,7 +53,8 @@ Use a more readable tab size (opinionated).
 */
 html {
   -moz-tab-size: 4;
-  tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
 }
 
 /**
@@ -103,7 +105,8 @@ Text-level semantics
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 abbr[title] {
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -443,7 +446,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .page-header__logo img {
-    height: 40px;
+    height: 44px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -455,7 +458,7 @@ li {
 @media screen and (max-width: 800px) {
   .menu-button {
     border: none;
-    background-color: transparent;
+    background-color: #d3dee4;
     z-index: 2;
     cursor: pointer;
   }
@@ -565,12 +568,12 @@ li {
   overflow: hidden;
   border: 1px solid #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   background-color: #d3dee4;
 }
 .lang-switch button {
   flex: 1;
-  padding: 4px 8px;
+  padding: 6px 12px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -596,33 +599,6 @@ li {
 @media screen and (max-width: 767.5px) {
   .page-header__container {
     justify-content: space-between;
-  }
-}
-
-.header__contact-btn {
-  width: 100%;
-  padding: 12px 18px;
-  margin-bottom: 20px;
-  background-color: #d3dee4;
-  color: #2B3147;
-  border: 1px solid #d3dee4;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.header__contact-btn:hover, .header__contact-btn:focus {
-  outline: 1px solid #003a79;
-}
-.header__contact-btn:active {
-  transform: translateY(0);
-}
-@media screen and (min-width: 801px) {
-  .header__contact-btn {
-    display: none;
   }
 }
 
@@ -743,7 +719,6 @@ li {
   margin: 0 auto 1.5rem;
 }
 .hero-section .hero-section__content .hero-section__title {
-  background-color: #2B2B2B;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.1;
@@ -847,7 +822,8 @@ li {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: transform 0.5s ease;
 }
 .hero-section .hero-section__image-wrapper:hover img {
@@ -865,7 +841,7 @@ li {
   background-color: #2B3147;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -876,13 +852,12 @@ li {
 @media (min-width: 480px) {
   .hero-section .hero-section__btn {
     padding: 0.9rem 1.7rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 768px) {
   .hero-section .hero-section__btn {
     padding: 1.1rem 2rem;
-    font-size: 1rem;
   }
 }
 @media (min-width: 1024px) {
@@ -906,7 +881,7 @@ li {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
 }
@@ -916,17 +891,16 @@ li {
 }
 
 .modal__content-wrapper {
-  background: #ffffff;
+  background: #fff;
   border-radius: 10px;
   max-width: 500px;
   width: 90%;
   padding: 30px;
   position: relative;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-  max-height: 90vh;
-  overflow-y: auto;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Кнопка закриття */
 #contactClose {
   position: absolute;
   top: 15px;
@@ -934,19 +908,20 @@ li {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  color: #2B3147;
+  color: #333;
 }
 
 #contactClose:hover {
-  color: #2B3147;
+  color: #ff4d4d;
 }
 
+/* Форми */
 .form label {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: 500;
-  color: #757575;
+  color: #555;
 }
 
 .form input,
@@ -955,18 +930,15 @@ li {
   width: 100%;
   padding: 10px;
   font-size: 14px;
-  border: 1px solid #d3dee4;
+  border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
-  background-color: #f6f8fa;
-  color: #2B3147;
 }
 
 .form input:focus,
 .form textarea:focus {
-  border-color: #add8fb;
+  border-color: #007bff;
   outline: none;
-  background-color: #e8f6fe;
 }
 
 .form textarea {
@@ -975,30 +947,24 @@ li {
 }
 
 .form button[type=submit] {
-  display: block;
-  margin: 0 auto;
   margin-top: 20px;
-  min-width: 250px;
-  min-height: 48px;
   padding: 10px 18px;
-  background-color: #2B3147;
-  color: #ffffff;
+  background-color: #007bff;
+  color: #fff;
   border: none;
   font-size: 15px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .form button[type=submit]:hover {
-  background-color: #add8fb;
-  color: #2B3147;
+  background-color: #0056b3;
 }
 
 .form h2 {
   font-size: 18px;
   margin-bottom: 20px;
-  color: #2B3147;
+  color: #222;
 }
 
 #goal {
@@ -1015,7 +981,8 @@ li {
 }
 @media screen and (min-width: 768px) {
   #goal .goal-wrapper .goal-title {
-    text-align-last: left;
+    -moz-text-align-last: left;
+         text-align-last: left;
   }
 }
 #goal .goal-wrapper .goal-text-wrapper {
@@ -1023,7 +990,8 @@ li {
   max-width: 90%;
   margin: 0 auto;
   text-align: center;
-  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   color: #2B3147;
   border-radius: 16px;
   z-index: 2;
@@ -1036,7 +1004,8 @@ li {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 2/3;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 12px;
   transition: opacity 0.6s ease, transform 0.3s ease;
 }
@@ -1109,7 +1078,8 @@ li {
 #about .about-list__item {
   position: relative;
   background: linear-gradient(90deg, #d3dee4 30%, rgba(211, 222, 228, 0.5));
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   border-left: 6px solid #add8fb;
   padding: 24px;
   border-radius: 10px;
@@ -1168,7 +1138,8 @@ li {
   width: 100%;
   height: auto;
   max-height: 500px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   aspect-ratio: attr(width)/attr(height);
   border-radius: 8px;
   transition: transform 0.4s ease;
@@ -1376,6 +1347,7 @@ li {
 }
 .contact-box {
   margin: 40px auto;
+  padding: 20px;
   border-radius: 12px;
   text-align: center;
 }
@@ -1384,52 +1356,12 @@ li {
   font-weight: 700;
   margin-bottom: 20px;
 }
-.contact-box .contactBtn {
-  display: inline-flex;
-  align-items: center;
-  width: 100%;
-  max-width: 280px;
-  min-height: 60px;
-  gap: 8px;
-  margin: 0 auto 20px;
-  padding: 12px 20px;
-  background: linear-gradient(180deg, #ffffff 0%, #d3dee4 50%, #ffffff 100%);
-  color: #2B3147;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  border: 1px solid #2B3147;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-.contact-box .contactBtn:hover {
-  background: #003a79;
-  color: #ffffff;
-}
-@media screen and (min-width: 480px) {
-  .contact-box .contactBtn {
-    max-width: 350px;
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contact-box .contactBtn {
-    max-width: 350px;
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .contact-box .contactBtn {
-    margin-bottom: 30px;
-  }
-}
 .contact-box .contact-links {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .contact-box .contact-links {
     flex-direction: row;
     justify-content: center;
@@ -1441,7 +1373,7 @@ li {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  max-width: 280px;
+  max-width: 250px;
   gap: 8px;
   margin: 10px auto;
   padding: 12px;
@@ -1452,17 +1384,11 @@ li {
   color: #ffffff;
   transition: all 0.3s ease;
 }
-@media screen and (min-width: 480px) {
-  .contact-box .contact-link {
-    max-width: 350px;
-    font-size: 18px;
-  }
-}
 @media screen and (min-width: 768px) {
   .contact-box .contact-link {
     padding: 12px 20px;
     font-size: 18px;
-    max-width: 350px;
+    max-width: 300px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1533,7 +1459,8 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .play-button {
@@ -1806,31 +1733,6 @@ li {
   padding-top: 1rem;
 }
 
-.footer__btn {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 8px;
-  margin-top: 8px;
-  background-color: #d3dee4;
-  color: #2B3147;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.footer__btn:hover {
-  transform: scale(1.05);
-}
-.footer__btn:active {
-  transform: scale(1.05);
-}
-@media screen and (min-width: 768px) {
-  .footer__btn {
-    font-size: 16px;
-  }
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -1849,7 +1751,8 @@ li {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   animation: zoomIn 0.3s ease;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
 }
 .modal__caption {
@@ -1890,6 +1793,4 @@ li {
     transform: scale(1);
     opacity: 1;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

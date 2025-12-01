@@ -5,3 +5,5 @@ import './accordion.js';
 import './facade.js';
 import './modal.js';
 import './i18next.js';
+import './contactModal.js';
+import './validation.js';
