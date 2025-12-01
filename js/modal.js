@@ -50,3 +50,9 @@ document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     }
 });
+
+document.querySelectorAll('.modal__close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('.modal').style.display = 'none';
+    });
+});

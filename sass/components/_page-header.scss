@@ -10,6 +10,7 @@
   background: $light-accent-color;
 
   border-bottom: 1px solid $light-accent-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
 
   &__container {
@@ -31,7 +32,7 @@
     width: auto;
 
     @media screen and (min-width: 768px) {
-      height: 44px;
+      height: 40px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -45,7 +46,7 @@
 @media screen and (max-width: 800px) {
   .menu-button {
     border: none;
-    background-color: $light-accent-color;
+    background-color: transparent;
     z-index: 2;
     cursor: pointer;
 
@@ -177,12 +178,12 @@
   border: 1px solid $primary-white-color;
 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   background-color: $light-accent-color;
 
   button {
     flex: 1;
-    padding: 6px 12px;
+    padding: 4px 8px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -203,7 +204,6 @@
   }
 }
 
-
 .page-header__container {
   display: flex;
   align-items: center;
@@ -212,5 +212,37 @@
 
   @media screen and (max-width: 767.5px) {
     justify-content: space-between;
+  }
+}
+
+.header__contact-btn {
+  width: 100%;
+  padding: 12px 18px;
+  margin-bottom: 20px;
+
+  background-color: $light-accent-color;
+  color: $dark-accent-color;
+  border: 1px solid $light-accent-color;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid #003a79;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media screen and (min-width: 801px) {
+    display: none;
   }
 }

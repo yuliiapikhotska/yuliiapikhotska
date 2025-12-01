@@ -8,16 +8,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-
-  background-color: $transparent-black-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media screen and (max-width: 479px) {
-    z-index: 10;
-  }
-
+  pointer-events: auto;
+  transition: opacity 0.25s ease;
 }
 
 .backdrop.is-hidden {
@@ -25,26 +22,17 @@
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.85);
+.modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 450px;
-  padding: 40px;
-
-  background-color: $primary-white-color;
-
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media screen and (max-width: 479px) {
-    width: 100%;
-  }
+.modal.is-hidden {
+  display: none !important;
 }
 
 @media screen and (min-width: 1200px) {
@@ -55,21 +43,6 @@
   }
 }
 
-.modal__title {
-  margin-bottom: 12px;
-
-  color: $secondary-text-color;
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-
-  @media screen and (min-width: 1200px) {
-    font-size: 20px;
-    line-height: 1.15;
-  }
-}
 
 .modal__close-button {
   @include flexCentered;
@@ -86,161 +59,4 @@
   border-radius: 50%;
 
   cursor: pointer;
-}
-
-.modal__icon {
-  fill: $primary-black-color;
-  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  .modal__close-button:hover &,
-  .modal__close-button:focus & {
-  }
-}
-
-.order-form__button {
-  width: 200px;
-  height: 50px;
-
-  color: $primary-white-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    background-color: $dark-accent-color;
-  }
-}
-
-.form-field {
-  @extend %list;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-field__label {
-  display: block;
-  margin-bottom: 4px;
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-
-  color: $primary-text-color;
-}
-
-.form-field__item {
-  position: relative;
-}
-
-.form-field__item--comment {
-  margin-bottom: 20px;
-}
-
-.form-field__input {
-  width: 100%;
-  height: 40px;
-  padding-left: 42px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  &:focus {
-    outline: transparent;
-  }
-
-  &::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-  }
-}
-
-.form-field__input--comment {
-  height: 120px;
-  padding: 12px 16px;
-  resize: none;
-}
-
-.form-field__icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-
-  fill: $secondary-text-color;
-
-  .form-field__input:focus~& {
-  }
-}
-
-.checkbox {
-  margin-bottom: 30px;
-
-  &__input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: absolute;
-  }
-
-  &__icon {
-    display: inline-block;
-    align-self: center;
-    width: 16px;
-    height: 15px;
-    margin-right: 8px;
-    background-image: url('../images/icons/check.svg');
-
-    @media screen and (max-width: 479px) {
-      background-size: cover;
-    }
-
-  }
-
-  &__input:checked+&__icon {
-    background-image: url('../images/icons/checked.svg');
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-
-    border-radius: 2px;
-  }
-}
-
-.checkbox__label {
-  @include flexCentered;
-  justify-content: start;
-
-  @media screen and (max-width: 479px) {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  @media screen and (min-width: 1200px) {
-    justify-content: center;
-  }
-}
-
-.checkbox__text {
-  font-size: 12px;
-  line-height: 1.17;
-
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.71;
-  }
-}
-
-.checkbox__link {
-  font-size: 12px;
-  line-height: 1.17;
-
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.71;
-  }
 }

@@ -5,13 +5,15 @@
         "methods": "My Methods",
         "consultations": "Consultations",
         "reviews": "Testimonials",
-        "faq": "FAQ"
+        "faq": "FAQ",
+        "button": "Book a Consultation"
     },
     "hero": {
         "title": "Certified Psychologist, Psychological Counsellor",
         "title1": "Certified Psychologist, ",
         "title2": "Psychological Counsellor",
-        "subtitle": "Member of the National Psychological Association"
+        "subtitle": "Member of the National Psychological Association",
+        "button": "Book a Consultation"
     },
     "about": {
         "title": "Foundations of My Professional Practice",
@@ -97,11 +99,20 @@
     "footer": {
         "name": "Yuliia Pihotska",
         "position": "Practical Psychologist",
+        "button": "Consultation",
         "email": "Email:",
         "phone": "Phone: ",
         "navitem1": "About me",
         "navitem2": "Consultations",
         "navitem3": "Testimonials",
         "copyright": "© 2025 Yuliia Pihotska"
+    },
+    "form": {
+        "title": "Please leave your details. I will contact you shortly to arrange our meeting.",
+        "name": "Name",
+        "phone": "Phone",
+        "messenger": "Which app do you prefer for communication?",
+        "message": "Message",
+        "button": "Send"
     }
 }
